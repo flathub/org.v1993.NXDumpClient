@@ -26,6 +26,10 @@ modules:
         url: https://gitlab.gnome.org/jwestman/blueprint-compiler.git
         tag: v0.10.0
         commit: 2a39a16391122af2f3d812e478c1c1398c98b972
+        x-checker-data:
+          type: git
+          tag-pattern: "^v([\\d.]+)$"
+          version-scheme: semantic
 
   - name: libgusb
     buildsystem: meson
@@ -100,3 +104,7 @@ modules:
         url: https://github.com/v1993/nxdumpclient.git
         tag: v1.0.0
         commit: 2004844684b4496f8abea27cab2c4b648c8c98b0
+        x-checker-data:
+          type: git
+          tag-pattern: "^v([\\d.]+)$"
+          version-scheme: semantic
