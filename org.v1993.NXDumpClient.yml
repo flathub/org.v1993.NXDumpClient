@@ -23,8 +23,9 @@ modules:
       - "*"
     sources:
       - type: git
-        url: https://gitlab.gnome.org/jwestman/blueprint-compiler
+        url: https://gitlab.gnome.org/jwestman/blueprint-compiler.git
         tag: v0.10.0
+        commit: 2a39a16391122af2f3d812e478c1c1398c98b972
 
   - name: libgusb
     buildsystem: meson
@@ -50,6 +51,11 @@ modules:
       - type: archive
         url: https://github.com/hughsie/libgusb/releases/download/0.4.7/libgusb-0.4.7.tar.xz
         sha256: 8acdd015c6f572555f8ec54c045e2d340baeb08468f6be519369c713794234f7
+        x-checker-data:
+          type: json
+          url: "https://api.github.com/repos/hughsie/libgusb/releases/latest"
+          version-query: ".tag_name"
+          url-query: ".assets[] | select(.name==\"libgusb-\" + $version + \".tar.xz\") | .browser_download_url"
 
   - name: libportal
     buildsystem: meson
@@ -76,6 +82,11 @@ modules:
       - type: archive
         url: https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz
         sha256: 297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805
+        x-checker-data:
+          type: json
+          url: "https://api.github.com/repos/flatpak/libportal/releases/latest"
+          version-query: ".tag_name"
+          url-query: ".assets[] | select(.name==\"libportal-\" + $version + \".tar.xz\") | .browser_download_url"
 
   - name: nxdumpclient
     buildsystem: meson
