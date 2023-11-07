@@ -104,8 +104,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/v1993/nxdumpclient.git
-        tag: v1.1.0
-        commit: 2c5bc255afdf322a503b56b19b6c073d0b4ea2ea
+        tag: v1.1.1
+        commit: f1e6c03b76561020eebea99e80aa25a203ef0128
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
