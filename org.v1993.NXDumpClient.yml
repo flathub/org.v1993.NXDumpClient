@@ -100,7 +100,6 @@ modules:
     config-opts:
       - -Dudev_rules=prompt
       - -Dlibportal=enabled
-      - -Denforce_build_order=true
     sources:
       - type: git
         url: https://github.com/v1993/nxdumpclient.git
