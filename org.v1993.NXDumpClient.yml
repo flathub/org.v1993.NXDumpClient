@@ -24,8 +24,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/jwestman/blueprint-compiler.git
-        tag: v0.14.0
-        commit: 8e10fcf8692108b9d4ab78f41086c5d7773ef864
+        tag: v0.16.0
+        commit: 04ef0944db56ab01307a29aaa7303df6067cb3c0
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -85,8 +85,8 @@ modules:
       - '*.a'
     sources:
       - type: archive
-        url: https://github.com/flatpak/libportal/releases/download/0.9.0/libportal-0.9.0.tar.xz
-        sha256: 113910f06f39387328805397053d20c7acafb7388d8e6cd5e06e05efb9690735
+        url: https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz
+        sha256: de801ee349ed3c255a9af3c01b1a401fab5b3fc1c35eb2fd7dfb35d4b8194d7f
         x-checker-data:
           type: json
           url: https://api.github.com/repos/flatpak/libportal/releases/latest
