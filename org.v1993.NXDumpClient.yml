@@ -1,6 +1,6 @@
 app-id: org.v1993.NXDumpClient
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '51'
 sdk: org.gnome.Sdk
 command: nxdumpclient
 finish-args:
@@ -39,24 +39,6 @@ modules:
           url: https://api.github.com/repos/hughsie/libgusb/releases/latest
           version-query: .tag_name
           url-query: .assets[] | select(.name=="libgusb-" + $version + ".tar.xz")
-            | .browser_download_url
-
-  - name: libportal
-    buildsystem: meson
-    config-opts:
-      - -Dauto_features=disabled
-      - -Dbackend-gtk4=enabled
-      - -Ddocs=false
-      - -Dtests=false
-    sources:
-      - type: archive
-        url: https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz
-        sha256: de801ee349ed3c255a9af3c01b1a401fab5b3fc1c35eb2fd7dfb35d4b8194d7f
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/flatpak/libportal/releases/latest
-          version-query: .tag_name
-          url-query: .assets[] | select(.name=="libportal-" + $version + ".tar.xz")
             | .browser_download_url
 
   - name: nxdumpclient
